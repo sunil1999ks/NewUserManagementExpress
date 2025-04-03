@@ -1,20 +1,4 @@
-// const mongoose = require("mongoose")
-
-// let connectDB = async  ()  => {
-//     // await mongoose.connect("mongodb+srv://hbdsharanappa52:Z6R37v7Kid6pgRV3@cluster0.xofe4ov.mongodb.net/user_management?retryWrites=true&w=majority&appName=Cluster0")
-//     await mongoose.connect("mongodb+srv://kssunil531:sunil@123@cluster0.cb3zh4a.mongodb.net/user_management?retryWrites=true&w=majority&appName=Cluster0",{
-//         useNewUrlParser: true,
-//     })
-//     .then(()=> console.log('COnnected to DB'))
-//     .catch(()=> console.log('failed to connect to DB'))
-    
-// }
-
-// module.exports = connectDB
-
-
-
-const mongoose = require("mongoose");
+ const mongoose = require("mongoose");
 
 const connectDB = async () => {
     try {

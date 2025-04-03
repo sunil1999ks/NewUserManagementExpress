@@ -12,6 +12,7 @@ app.use (express.json())
 app.use('/api/users',userRoutes)
 
 
+
 app.listen(PORT,()=>{
     console.log(`Running on http://localhost:${PORT}`)
 })

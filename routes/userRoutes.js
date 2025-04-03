@@ -1,14 +1,22 @@
 const express = require("express")
+
+const verify_token = require("../middlewares/verification");
+
 const router = express.Router();
- 
-// const {register,login,profile} =require("../routes/controllers/userController");
-const {login,profile,register } = require("../controllers/userController")
+
+
+
+const { login, profile, register, transaction, wishlist } = require("../controllers/userController");
 
 
 
 router.post('/register/', register)
-router.get('/profile/', profile)
-router.get('/login/', login)
+router.post('/login/', login)
+
+router.get('/profile/', verify_token, profile)
+
+router.get('/transaction/', verify_token, transaction)
+router.get('/wishlist/', verify_token, wishlist)
 
 
 
